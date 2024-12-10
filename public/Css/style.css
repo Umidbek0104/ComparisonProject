@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.header_block{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search_input{
+    border: none;
+    outline: none;
+    width: 270px;
+}
+
+.input_block{
+    width: 300px;
+    height: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.right_left i{
+    width: 100px;
+}
+.comparison_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.phone_selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_phone{
+    width: 300px;
+}
+
+.right_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.select_phone{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    outline: hidden;
+    color: rgba(103, 100, 100, 1);
+    border-radius: 8px;
+   background-color: #fff;
+}
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comparison_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comparisonLink{
+    text-decoration: none;
+}
+.comparison_btn, .add_phone, .addbtn{
+    width: 250px;
+    height: 40px;
+    background-color: rgba(92, 217, 110, 1);
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Admin page css */
+
+.phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.addPhone{
+    margin: 40px 0;
+}
+
+.phone_inputblock{
+    width: 245px;
+    height: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone_inp{
+    border: none;
+    width: 380px;
+    outline: none;
+}
+
+.inputBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.phone_inputblock{
+    width: 400px;
+    height: 30px;
+}
+
+.image-upload {
+    background-color: #f7f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Hide the default file input */
+.image-upload input[type="file"] {
+    display: none;
+}
+
+/* Custom upload button */
+.image-upload label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+.image-upload label:hover {
+    background-color: rgba(92, 217, 110, 1);
+}
+
+/* Display selected image */
+.image-preview {
+    margin-top: 15px;
+    max-width: 100%;
+    max-height: 200px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Display file name */
+.file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.add_btn{
+    background-color: rgba(92, 217, 110, 1);
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.select_ph_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
