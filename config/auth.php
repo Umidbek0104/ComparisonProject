@@ -69,8 +69,12 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+//        Spatie\Permission\PermissionServiceProvider::class,
     ],
-
+//    'providers' => [
+//        // ...
+//        Spatie\Permission\PermissionServiceProvider::class,
+//    ],
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords

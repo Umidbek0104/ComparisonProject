@@ -29,6 +29,26 @@
 
 <main>
     <div class="container">
+        @if(!Auth::check())
+            <a href="{{ route('MyLogin') }}">Kirish</a>
+            <a href="{{ route('MyRegister') }}">Royxatdan otish</a>
+        @else
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit">Chiqish</button>
+            </form>
+
+            @if(Auth::user()->hasRole('admin'))
+                <p>Welcome, Admin!</p>
+                <a href="{{ route('admin.page') }}">Dashboard</a>
+            @endif
+
+            @if(Auth::user()->hasRole('user'))
+                <a href="{{ route('index') }}">Welcome, User</a>
+            @endif
+        @endif
+
+
         <form action="{{ route('resolt.check') }}" method="POST">
             @csrf
             <div class="comparison_block">
