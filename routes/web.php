@@ -49,7 +49,7 @@ Route::post('/admin/phone/edit', [PhoneController::class, 'editPhonepost'])->nam
 Route::get('/admin/phone/{id}/delete', [PhoneController::class, 'deletePhone'])->name('delete.phone');
 
 
-Route::get('/resolt',[TaqqoslashController::class, 'resolt'])->name('resolt.page');
-
+Route::get('/resolt',[TaqqoslashController::class, 'resoltPage'])->name('resolt.page');
+Route::post('/resolt/check',[TaqqoslashController::class, 'resoltCheck'])->name('resolt.check');
 
 

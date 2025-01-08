@@ -26,87 +26,47 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="container">
-        <div class="comparison_block">
-            <div class="phone_selection">
-                <div class="selection">
-                    <select name="" id="" class="select_phone">
-                        <option value="select phone" hidden>Kategoriya tanlash</option>
-                        <option value="select phone" class="select_value">
-                            Samsung
-                        </option>
-                        <option value="select phone" class="select_value">Redmi</option>
-                        <option value="select phone" class="select_value">
-                            Infinix
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Iphone
-                        </option>
-                    </select>
-                    <select name="" id="" class="select_phone">
-                        <option value="select phone" hidden>Telefon tanlash</option>
-                        <option value="select phone" class="select_value">
-                            Samsung A24
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung A21
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung note 10
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung A15
-                        </option>
-                    </select>
+        <form action="{{ route('resolt.check') }}" method="POST">
+            @csrf
+            <div class="comparison_block">
+                <div class="phone_selection">
+                    <div class="selection">
+                        <select name="phone1" required class="select_phone">
+                            <option value="" hidden>Telefon tanlash</option>
+                            @foreach($phones as $phone)
+                                <option value="{{ $phone->id }}" class="select_value">
+                                    {{ $phone->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-                <img src="./image/image.png" alt="" class="img_phone" />
-                <p>Infinix</p>
-            </div>
-            <div class="right_left ">
-                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-            </div>
-            <div class="phone_selection">
-                <div class="selection">
-                    <select name="" id="" class="select_phone">
-                        <option value="select phone" hidden>Kategoriya tanlash</option>
-                        <option value="select phone" class="select_value">
-                            Samsung
-                        </option>
-                        <option value="select phone" class="select_value">Redmi</option>
-                        <option value="select phone" class="select_value">
-                            Infinix
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Iphone
-                        </option>
-                    </select>
-                    <select name="" id="" class="select_phone">
-                        <option value="select phone" hidden>Telefon tanlash</option>
-                        <option value="select phone" class="select_value">
-                            Samsung A24
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung A21
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung note 10
-                        </option>
-                        <option value="select phone" class="select_value">
-                            Samsung A15
-                        </option>
-                    </select>
+                <div class="right_left">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
-                <img src="./image/xiomi.png" alt="" class="img_phone" />
-                <p>Xiomi</p>
+                <div class="phone_selection">
+                    <div class="selection">
+                        <select name="phone2" required class="select_phone">
+                            <option value="" hidden>Telefon tanlash</option>
+                            @foreach($phones as $phone)
+                                <option value="{{ $phone->id }}" class="select_value">
+                                    {{ $phone->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="comparison_button">
-            <a href="./Pages/result.html" class="comparisonLink"
-            ><button class="comparison_btn">Taqqoslash</button></a
-            >
-        </div>
+            <div class="comparison_button">
+                <button type="submit" class="comparison_btn">Taqqoslash</button>
+            </div>
+        </form>
     </div>
 </main>
+
+
 </body>
 </html>
